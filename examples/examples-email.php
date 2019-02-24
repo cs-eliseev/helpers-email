@@ -14,3 +14,10 @@ var_dump(Email::hide('email@google.com'));
 // e***l***8@google.com
 var_dump(Email::hide('email2018@google.com'));
 echo PHP_EOL;
+
+// Example: check domain to email
+// true
+var_dump(Email::checkDomain('mail@google.com', 'google.com'));
+// false
+var_dump(Email::checkDomain('mail@mail.ru', 'google.com'));
+echo PHP_EOL;
