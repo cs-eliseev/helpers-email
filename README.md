@@ -93,6 +93,15 @@ Email::checkDomain('mail@mail.ru', $domain);
 // false
 ```
 
+**IS email**
+
+Example:
+```php
+Email::is('mail@google.com')
+// true
+Email::is('Example text mail@google.com')
+// false
+```
 
 ## License
 
