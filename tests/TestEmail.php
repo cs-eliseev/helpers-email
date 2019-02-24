@@ -36,4 +36,35 @@ class TestEmail extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param string $email
+     * @param string $domain
+     * @param bool $expected
+     *
+     * @dataProvider providerCheckDomain
+     */
+    public function testCheckDomain(string $email, string $domain, bool $expected): void
+    {
+        $this->assertEquals($expected, Email::checkDomain($email, $domain));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerCheckDomain(): array
+    {
+        return [
+            [
+                'mail@google.com',
+                'google.com',
+                true,
+            ],
+            [
+                'mail@mail.ru',
+                'google.com',
+                false,
+            ],
+        ];
+    }
 }
