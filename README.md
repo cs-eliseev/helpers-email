@@ -62,6 +62,26 @@ git clone https://github.com/cs-eliseev/helpers-email.git
 
 The class consists of static methods that are conveniently used in any project. See example [examples-email.php](https://github.com/cs-eliseev/helpers-email/blob/master/examples/examples-email.php).
 
+**Hide email**
+
+Example short email:
+```php
+Email::hide('mail@google.com');
+// m***@google.com
+```
+
+Example medium email:
+```php
+Email::hide('email@google.com');
+// m***l@google.com
+```
+
+Example large email:
+```php
+Email::hide('email2018@google.com');
+// e***l***8@google.com
+```
+
 
 ## License
 
