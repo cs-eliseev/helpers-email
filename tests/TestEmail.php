@@ -67,4 +67,40 @@ class TestEmail extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param string $email
+     * @param bool $expected
+     *
+     * @dataProvider providerIs
+     */
+    public function testIs(string $email, bool $expected): void
+    {
+        $this->assertEquals($expected, Email::is($email));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerIs(): array
+    {
+        return [
+            [
+                '',
+                false,
+            ],
+            [
+                'mail@google.com',
+                true,
+            ],
+            [
+                'Test text mail@google.com',
+                false,
+            ],
+            [
+                'mail@google.com test text',
+                false,
+            ],
+        ];
+    }
 }
