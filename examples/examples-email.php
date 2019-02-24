@@ -21,3 +21,10 @@ var_dump(Email::checkDomain('mail@google.com', 'google.com'));
 // false
 var_dump(Email::checkDomain('mail@mail.ru', 'google.com'));
 echo PHP_EOL;
+
+// Example: check email
+// true
+var_dump(Email::is('mail@google.com'));
+// false
+var_dump(Email::is('Example text mail@google.com'));
+echo PHP_EOL;
