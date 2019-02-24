@@ -59,4 +59,15 @@ class Email
 
         return strlen($email) == 0 ? false : (preg_match('/^.*@' . $domain . '$/i', $email) === 1);
     }
+
+    /**
+     * Check email
+     *
+     * @param string $email
+     * @return bool
+     */
+    public static function is(string $email): bool
+    {
+        return (bool) filter_var($email, FILTER_VALIDATE_EMAIL);
+    }
 }
