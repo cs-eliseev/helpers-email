@@ -45,4 +45,18 @@ class Email
 
         return $result . '@' . $domain;
     }
+
+    /**
+     * Check domain to email
+     *
+     * @param string $email
+     * @param string $domain
+     * @return bool
+     */
+    public static function checkDomain(string $email, string $domain): bool
+    {
+        $email = trim($email);
+
+        return strlen($email) == 0 ? false : (preg_match('/^.*@' . $domain . '$/i', $email) === 1);
+    }
 }
