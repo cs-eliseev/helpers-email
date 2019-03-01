@@ -11,7 +11,7 @@ Project repository: https://github.com/cs-eliseev/helpers-email
 
 CSE HELPERS is a collection of several libraries with simple functions written in PHP for people.
 
-Despite using PHP as the main programming language for the Internet, its functions are not enough. EMAIL CSE HELPERS for manipulating, get and detecting email.
+Despite using PHP as the main programming language for the Internet, its functions are not enough. EMAIL CSE HELPERS for manipulating, extract and detecting email.
 
 CSE HELPERS was created for the rapid development of web applications.
 
@@ -125,6 +125,19 @@ Email::exist('Example text mail@inbox.com', '([a-z]+@google.com)');
 // false
 ```
 
+**EXTRACT email from string**
+
+Example:
+```php
+Email::extract('Example text mail@google.com');
+// mail@google.com
+```
+
+Change pattern:
+```php
+Email::extract('Example text mail@inbox.com', '([a-z]+@google.com)');
+// null
+```
 
 ## License
 
