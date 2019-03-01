@@ -17,6 +17,7 @@ class Email
      * Hide email
      *
      * @param $email
+     *
      * @return string
      */
     public static function hide(string $email): string
@@ -51,6 +52,7 @@ class Email
      *
      * @param string $email
      * @param string $domain
+     *
      * @return bool
      */
     public static function checkDomain(string $email, string $domain): bool
@@ -64,6 +66,7 @@ class Email
      * Check email
      *
      * @param string $email
+     *
      * @return bool
      */
     public static function is(string $email): bool
