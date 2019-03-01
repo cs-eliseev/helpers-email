@@ -97,11 +97,34 @@ Email::checkDomain('mail@mail.ru', $domain);
 
 Example:
 ```php
-Email::is('mail@google.com')
+Email::is('mail@google.com');
 // true
-Email::is('Example text mail@google.com')
+Email::is('Example text mail@google.com');
 // false
 ```
+
+**EXIST email**
+
+Example:
+```php
+Email::exist('mail@google.com');
+// true
+Email::exist('Example text mail@google.com');
+// true
+```
+
+Check email to string:
+```php
+Email::exist('Example text mail@google.com');
+// true
+```
+
+Change pattern:
+```php
+Email::exist('Example text mail@inbox.com', '([a-z]+@google.com)');
+// false
+```
+
 
 ## License
 
