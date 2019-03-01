@@ -86,4 +86,16 @@ class Email
     {
         return preg_match('/' . $pattern . '/iD', $string) === 1;
     }
+
+    /**
+     * Get email to string
+     *
+     * @param string $string
+     * @param string $pattern
+     * @return null|string
+     */
+    public static function get(string $string, string $pattern = self::PATTERN): ?string
+    {
+        return preg_match('/' . $pattern . '/iD', $string, $email) === 1 ? $email[0] : null;
+    }
 }
