@@ -29,9 +29,9 @@ var_dump(Email::is('mail@google.com'));
 var_dump(Email::is('Example text mail@google.com'));
 echo PHP_EOL;
 
-// Example: get email
+// Example: extract email
 //  mail@google.com
-var_dump(Email::get('Example text mail@google.com'));
+var_dump(Email::extract('Example text mail@google.com'));
 // null
-var_dump(Email::get('Example text mail@inbox.com', '([a-z]+@google.com)'));
+var_dump(Email::extract('Example text mail@inbox.com', '([a-z]+@google.com)'));
 echo PHP_EOL;

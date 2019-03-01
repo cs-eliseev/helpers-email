@@ -1,6 +1,6 @@
 {
     "name": "cse/helpers-email",
-    "description": "The helpers allows you manipulating, get, detecting email.",
+    "description": "The helpers allows you manipulating, extract, detecting email.",
     "keywords": ["email", "cse", "cs-eliseev", "framework", "basic", "library", "project"],
     "homepage": "https://github.com/cs-eliseev/helpers-email",
     "type": "library",

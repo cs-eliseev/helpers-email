@@ -155,17 +155,17 @@ class TestEmail extends TestCase
      * @param string $format
      * @param null|string $expected
      *
-     * @dataProvider providerGet
+     * @dataProvider providerExtract
      */
-    public function testGet(string $email, string $format, ?string $expected): void
+    public function testExtract(string $email, string $format, ?string $expected): void
     {
-        $this->assertEquals($expected, Email::get($email, $format));
+        $this->assertEquals($expected, Email::extract($email, $format));
     }
 
     /**
      * @return array
      */
-    public function providerGet(): array
+    public function providerExtract(): array
     {
         return [
             [
