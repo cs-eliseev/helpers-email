@@ -28,3 +28,12 @@ var_dump(Email::is('mail@google.com'));
 // false
 var_dump(Email::is('Example text mail@google.com'));
 echo PHP_EOL;
+
+// Example: exist email
+// true
+var_dump(Email::exist('mail@google.com'));
+// true
+var_dump(Email::exist('Example text mail@google.com'));
+// false
+var_dump(Email::exist('Example text mail@inbox.com', '([a-z]+@google.com)'));
+echo PHP_EOL;
