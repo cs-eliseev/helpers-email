@@ -149,4 +149,55 @@ class TestEmail extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param string $email
+     * @param string $format
+     * @param null|string $expected
+     *
+     * @dataProvider providerGet
+     */
+    public function testGet(string $email, string $format, ?string $expected): void
+    {
+        $this->assertEquals($expected, Email::get($email, $format));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerGet(): array
+    {
+        return [
+            [
+                '',
+                Email::PATTERN,
+                null,
+            ],
+            [
+                'email@google.com',
+                Email::PATTERN,
+                'email@google.com',
+            ],
+            [
+                'Test text email@google.com',
+                Email::PATTERN,
+                'email@google.com',
+            ],
+            [
+                'Test text email@google.com',
+                '([a-z]+@google.com)',
+                'email@google.com',
+            ],
+            [
+                'Test text email@ema.com',
+                '([a-z]+@google.com)',
+                null,
+            ],
+            [
+                'Test text @google.com test text',
+                Email::PATTERN,
+                null,
+            ],
+        ];
+    }
 }
