@@ -1,9 +1,23 @@
 EMAIL CSE HELPERS
 =======
 
-The helpers allows you manipulating, get, detecting EMAIL.
+The helpers allows you manipulating, extract, detecting EMAIL.
 
 Project repository: https://github.com/cs-eliseev/helpers-email
+
+```php
+switch (true) {
+    case Email::is($emial):
+        break;
+    case Email::exist($emial):
+        $emial = Email::extract($emial);
+        break;
+    default:
+        new Exception('Email is not exist');
+}
+
+$emial = Email::hide($emial);
+```
 
 ***
 
