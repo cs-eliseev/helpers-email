@@ -80,6 +80,7 @@ class Email
      *
      * @param string $string
      * @param string $pattern
+     *
      * @return bool
      */
     public static function exist(string $string, string $pattern = self::PATTERN): bool
@@ -92,6 +93,7 @@ class Email
      *
      * @param string $string
      * @param string $pattern
+     *
      * @return null|string
      */
     public static function extract(string $string, string $pattern = self::PATTERN): ?string
