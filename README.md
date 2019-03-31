@@ -190,7 +190,7 @@ phpunit --configuration PATH/TO/PROJECT/phpunit.xml
 
 ## License
 
-The CSE HELPERS IP is open-source PHP library licensed under the MIT license. Please see [License File](https://github.com/cs-eliseev/helpers-email/blob/master/LICENSE.md) for more information.
+The CSE HELPERS EMAIL is open-source PHP library licensed under the MIT license. Please see [License File](https://github.com/cs-eliseev/helpers-email/blob/master/LICENSE.md) for more information.
 
 ***
 
