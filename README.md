@@ -193,6 +193,13 @@ phpunit --configuration PATH/TO/PROJECT/phpunit.xml
 ```
 
 
+## Donating
+
+You can support this project [here](https://www.paypal.me/cseliseev/10usd). 
+You can also help out by contributing to the project, or reporting bugs. 
+Even voicing your suggestions for features is great. Anything to help is much appreciated.
+
+
 ## License
 
 The CSE HELPERS EMAIL is open-source PHP library licensed under the MIT license. Please see [License File](https://github.com/cs-eliseev/helpers-email/blob/master/LICENSE.md) for more information.
