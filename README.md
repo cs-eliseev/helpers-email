@@ -16,7 +16,7 @@ The helpers allows you manipulating, extract, detecting EMAIL.
 
 Project repository: https://github.com/cs-eliseev/helpers-email
 
-DEMO:
+**DEMO**
 ```php
 switch (true) {
     case Email::is($emial):
@@ -35,11 +35,11 @@ $emial = Email::hide($emial);
 
 ## Introduction
 
-CSE HELPERS is a collection of several libraries with simple functions written in PHP for people.
+[CSE HELPERS](https://github.com/cs-eliseev/helpers/blob/master/README.md) is a collection of several libraries with simple functions written in PHP for people.
 
 Despite using PHP as the main programming language for the Internet, its functions are not enough. EMAIL CSE HELPERS for manipulating, extract and detecting email.
 
-CSE HELPERS was created for the rapid development of web applications.
+[CSE HELPERS](https://github.com/cs-eliseev/helpers/blob/master/README.md) was created for the rapid development of web applications.
 
 **CSE Helpers project:**
 * [Array CSE helpers](https://github.com/cs-eliseev/helpers-arrays)
