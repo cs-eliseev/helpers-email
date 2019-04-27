@@ -14,6 +14,7 @@ The helpers allows you manipulating, extract, detecting EMAIL.
 
 Project repository: https://github.com/cs-eliseev/helpers-email
 
+DEMO:
 ```php
 switch (true) {
     case Email::is($emial):
@@ -125,6 +126,10 @@ Example:
 ```php
 Email::is('mail@google.com');
 // true
+```
+
+Check email to string:
+```php
 Email::is('Example text mail@google.com');
 // false
 ```
@@ -134,8 +139,6 @@ Email::is('Example text mail@google.com');
 Example:
 ```php
 Email::exist('mail@google.com');
-// true
-Email::exist('Example text mail@google.com');
 // true
 ```
 
