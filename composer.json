@@ -1,7 +1,7 @@
 {
     "name": "cse/helpers-email",
     "description": "The helpers allows you manipulating, extract, detecting email.",
-    "keywords": ["email","emails", "mail", "mails", "cse", "collection", "collections", "tool", "tools", "utilities", "utils", "utility", "helper", "helpers", "library", "framework"],
+    "keywords": ["email", "emails", "mail", "mails", "cse", "collection", "collections", "tool", "tools", "utilities", "utils", "utility", "helper", "helpers", "library", "framework"],
     "homepage": "https://github.com/cs-eliseev/helpers-email",
     "type": "library",
     "license": "MIT",
