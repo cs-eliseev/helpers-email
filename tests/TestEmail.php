@@ -200,4 +200,55 @@ class TestEmail extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param string $email
+     * @param string $format
+     * @param null|array $expected
+     *
+     * @dataProvider providerExtractAll
+     */
+    public function testExtractAll(string $email, string $format, ?array $expected): void
+    {
+        $this->assertEquals($expected, Email::extractAll($email, $format));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerExtractAll(): array
+    {
+        return [
+            [
+                '',
+                Email::PATTERN,
+                null,
+            ],
+            [
+                'email@google.com',
+                Email::PATTERN,
+                ['email@google.com'],
+            ],
+            [
+                'Test text email@google.com, mail@inbox.com',
+                Email::PATTERN,
+                ['email@google.com', 'mail@inbox.com'],
+            ],
+            [
+                'Test text email@google.com, mail@inbox.com, mail@mail.ru',
+                '([a-z]+@google.com)',
+                ['email@google.com'],
+            ],
+            [
+                'Test text mail@inbox.com, mail@mail.ru',
+                '([a-z]+@google.com)',
+                null,
+            ],
+            [
+                'Test text @google.com test text',
+                Email::PATTERN,
+                null,
+            ],
+        ];
+    }
 }
