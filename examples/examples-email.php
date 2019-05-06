@@ -39,3 +39,13 @@ var_dump($label . Email::extract('Example text mail@google.com'));
 // null
 var_dump($label . Email::extract('Example text mail@inbox.com', '([a-z]+@google.com)'));
 echo PHP_EOL;
+
+// Example: extract all email
+$label = 'Extract all email: ';
+// [mail@inbox.com, mail@mail.ru]
+echo $label .PHP_EOL;
+var_dump(Email::extractAll('Example text mail@inbox.com, mail@mail.ru'));
+// null
+echo $label .PHP_EOL;
+var_dump(Email::extract('Example text mail@inbox.com, mail@mail.ru', '([a-z]+@google.com)'));
+echo PHP_EOL;
