@@ -37,7 +37,8 @@ $emial = Email::hide($emial);
 
 [CSE HELPERS](https://github.com/cs-eliseev/helpers/blob/master/README.md) is a collection of several libraries with simple functions written in PHP for people.
 
-Despite using PHP as the main programming language for the Internet, its functions are not enough. EMAIL CSE HELPERS for manipulating, extract and detecting email.
+Despite using PHP as the main programming language for the Internet, its functions are not enough. 
+EMAIL CSE HELPERS for manipulating, extract and detecting email.
 
 [CSE HELPERS](https://github.com/cs-eliseev/helpers/blob/master/README.md) was created for the rapid development of web applications.
 
@@ -89,7 +90,8 @@ git clone https://github.com/cs-eliseev/helpers-email.git
 
 ## Usage
 
-The class consists of static methods that are conveniently used in any project. See example [examples-email.php](https://github.com/cs-eliseev/helpers-email/blob/master/examples/examples-email.php).
+The class consists of static methods that are conveniently used in any project. 
+See example [examples-email.php](https://github.com/cs-eliseev/helpers-email/blob/master/examples/examples-email.php).
 
 **HIDE email**
 
@@ -168,6 +170,29 @@ Change pattern:
 ```php
 Email::extract('Example text mail@inbox.com', '([a-z]+@google.com)');
 // null
+```
+
+**EXTRACT ALL email from string**
+
+Example:
+```php
+Email::extract('Example text mail@google.com, mail@inbox.com');
+/**
+* [
+*     0 => 'mail@google.com',
+*     1 => 'mail@inbox.com'
+* ]
+*/
+```
+
+Change pattern:
+```php
+Email::extract('Example text mail@google.com, mail@inbox.com', '([a-z]+@google.com)');
+/**
+* [
+*     0 => 'mail@google.com'
+* ]
+*/
 ```
 
 
