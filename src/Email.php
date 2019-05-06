@@ -100,4 +100,19 @@ class Email
     {
         return preg_match('/' . $pattern . '/iD', $string, $email) === 1 ? $email[0] : null;
     }
+
+    /**
+     * Extract all email to string
+     *
+     * @param string $string
+     * @param string $pattern
+     *
+     * @return null|array
+     */
+    public static function extractAll(string $string, string $pattern = self::PATTERN): ?array
+    {
+        preg_match_all('/' . $pattern . '/i', $string, $email);
+
+        return  empty($email[0]) ? null : $email[0];
+    }
 }
