@@ -176,7 +176,7 @@ Email::extract('Example text mail@inbox.com', '([a-z]+@google.com)');
 
 Example:
 ```php
-Email::extract('Example text mail@google.com, mail@inbox.com');
+Email::extractAll('Example text mail@google.com, mail@inbox.com');
 /**
 * [
 *     0 => 'mail@google.com',
